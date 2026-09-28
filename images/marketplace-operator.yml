@@ -19,13 +19,17 @@ delivery:
   # Maps to honeybadger repo_name
   repo_name: ose-operator-marketplace
   delivery_repo_names:
-  - openshift5/ose-operator-marketplace-rhel9
+    - openshift5/ose-operator-marketplace-rhel9
 for_payload: true
 from:
   builder:
-  - stream: rhel-9-golang
+    - stream: rhel-9-golang
   member: openshift-enterprise-base-rhel9
 name: openshift5/ose-operator-marketplace-rhel9
 payload_name: operator-marketplace
 owners:
-- aos-marketplace@redhat.com
+  - aos-marketplace@redhat.com
+okd:
+  content:
+    source:
+      dockerfile: Dockerfile.okd
